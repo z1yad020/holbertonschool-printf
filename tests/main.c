@@ -9,12 +9,12 @@
  */
 int main(void)
 {
-	/*int len;
-    int len2;
-    unsigned int ui;
+	int len = _printf(NULL);
+	int len2 = printf(NULL);
+    /*   unsigned int ui;
     void *addr;*/
 
-	_printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
+	/*_printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
 	printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
 
 	_printf("%K\n");
@@ -33,10 +33,10 @@ int main(void)
 	printf("css%ccs%scscscs\n", 'T', "Test");
 
 	_printf(NULL);
-	printf(NULL);
+	printf(NULL);*/
 
-	_printf("%c", '\0');
-	printf("%c", '\0');
+	/*_printf("%d", '\0');*/
+	printf("%d\n%d", len, len2);
 
 
 /*_printf("%%\n");
