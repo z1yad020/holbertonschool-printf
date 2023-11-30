@@ -57,34 +57,3 @@ void prntnull(void)
 	while (*str)
 		write(1, str++, 1);
 }
-
-/**
- * switcher - find format specifier
- *
- * Return: void
- */
-int switcher(const char *format, va_list ap, int *counter)
-{
-	switch (*(++format))
-	{
-	case 'c':
-		prntchar(ap, counter);
-		break;
-	case 's':
-		prntstring(ap, counter);
-		break;
-	case '%':
-		write(1, format, 1);
-		(*counter)++;
-		break;
-	case '\0':
-		return (-1);
-	default:
-		write(1, format - 1, 1);
-		write(1, format, 1);
-		(*counter) += 2;
-		break;
-	}
-	format++;
-	return (0);
-}
