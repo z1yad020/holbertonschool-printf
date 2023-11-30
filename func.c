@@ -58,12 +58,13 @@ void prntnull(void)
 		write(1, str++, 1);
 }
 
+
 /**
  * switcher - find format specifier
  *
  * Return: void
  */
-int switcher(const char *format, va_list ap, int *counter)
+/*int switcher(const char *format, va_list ap, int *counter)
 {
 	switch (*(++format))
 	{
@@ -87,4 +88,4 @@ int switcher(const char *format, va_list ap, int *counter)
 	}
 	format++;
 	return (0);
-}
+	}*/
