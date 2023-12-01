@@ -13,8 +13,20 @@ int main(void)
 	int len2 = printf(NULL);
 	unsigned int ui;
     void *addr;*/
+	int len, len2;
 
-	_printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
+	len = _printf("%");
+	len2 = printf("%");
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		printf("%d\n%d\n", len, len2);
+		fflush(stdout);
+		return (1);
+	}
+
+	/*_printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
 	printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
 
 	_printf("%K\n");
@@ -33,7 +45,7 @@ int main(void)
 	printf("css%ccs%scscscs\n", 'T', "Test");
 
 	_printf(NULL);
-	printf(NULL);
+	printf(NULL);*/
 
 	/*_printf("%d", '\0');
 	  printf("%d\n%d", len, len2);*/

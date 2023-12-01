@@ -82,7 +82,7 @@ int switcher(const char **format, va_list ap, int *counter)
 		(*counter)++;
 		break;
 	case '\0':
-		return (-1);
+		exit(-1);
 	default:
 		write(1, *format - 1, 1);
 		write(1, *format, 1);
