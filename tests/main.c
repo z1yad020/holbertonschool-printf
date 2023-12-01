@@ -9,8 +9,8 @@
  */
 int main(void)
 {
-	int len = _printf(NULL);
-	int len2 = printf(NULL);
+	int len = _printf("%");
+	int len2 = printf("%");
     /*   unsigned int ui;
     void *addr;*/
 
@@ -36,7 +36,16 @@ int main(void)
 	printf(NULL);*/
 
 	/*_printf("%d", '\0');*/
-	printf("%d\n%d", len, len2);
+	/*printf("%d\n%d", len, len2);*/
+
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}
+	return (0);
 
 
 /*_printf("%%\n");
