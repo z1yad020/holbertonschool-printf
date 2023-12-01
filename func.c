@@ -60,13 +60,16 @@ void prntnull(void)
 
 
 /**
- * switcher - find format specifier
+ * switcher - switch cases
+ * @format: address of format
+ * @ap: va_list
+ * @counter: address of counter
  *
- * Return: void
+ * Return: -1 if %, 1
  */
-/*int switcher(const char *format, va_list ap, int *counter)
+int switcher(const char **format, va_list ap, int *counter)
 {
-	switch (*(++format))
+	switch (*(++(*format)))
 	{
 	case 'c':
 		prntchar(ap, counter);
@@ -75,17 +78,17 @@ void prntnull(void)
 		prntstring(ap, counter);
 		break;
 	case '%':
-		write(1, format, 1);
+		write(1, *format, 1);
 		(*counter)++;
 		break;
 	case '\0':
 		return (-1);
 	default:
-		write(1, format - 1, 1);
-		write(1, format, 1);
-		(*counter) += 2;
+		write(1, *format - 1, 1);
+		write(1, *format, 1);
+		*counter += 2;
 		break;
 	}
-	format++;
+	(*format)++;
 	return (0);
-	}*/
+}
