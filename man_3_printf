@@ -1,0 +1,71 @@
+.TH PRINTF 3 "2 December 2023" "Version 1.0" "_printf Man Page"
+
+.SH NAME
+_printf \- format and print data
+
+.SH SYNOPSIS
+\fBinclude "main.h"\fR
+.br
+\fBint _printf(const char *format, ...);\fR
+
+.SH DESCRIPTION
+The _printf() function produces output according to a format.
+
+.SH RETURN VALUE
+Returns the number of characters printed.
+
+.SH FORMAT SPECIFIERS
+The _printf function supports the following format specifiers:
+
+.TP
+\fB%c\fR
+Prints a single character.
+
+.TP
+\fB%s\fR
+Prints a string.
+
+.TP
+\fB%d,i\fR
+Prints an integer value in decimal format.
+
+.TP
+\fB%%\fR
+Prints a '%' character.
+
+.SH EXAMPLE
+
+.nf
+.B #include <stdio.h>
+.br
+.B #include "main.h"
+.br
+.B int main(void)
+.br
+.B {
+.br
+.B \ \ \ _printf("King in %che %s.", "t", "North");
+.br
+.B \ \ \ return (0);
+.br
+.B }
+.fi
+
+Output: "King in the North."
+
+.SH BUGS
+No known bugs.
+
+.SH AUTHORS
+Haji Mursalzada and Ziyad Ibrahimov.
+
+.SH REPORTING BUGS
+Report bugs to Authors.
+
+.SH COPYRIGHT
+Free to use.
+
+.SH SEE ALSO
+.B printf(3),
+.B man(7),
+.B putchar(3)
