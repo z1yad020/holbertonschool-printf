@@ -4,6 +4,7 @@
 ssize_t write(int, const void *, size_t);
 int _printf(const char *format, ...);
 
+int _putchar(char c);
 int prntdec(va_list args, int *);
 void prntchar(va_list, int *);
 void prntstring(va_list, int *);

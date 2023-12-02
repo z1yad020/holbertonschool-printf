@@ -81,6 +81,12 @@ int switcher(const char **format, va_list ap, int *counter)
 		write(1, *format, 1);
 		(*counter)++;
 		break;
+	case 'd':
+		prntdec(ap, counter);
+		break;
+	case 'i':
+		prntdec(ap, counter);
+		break;
 	case '\0':
 		exit(-1);
 	default:
