@@ -12,19 +12,26 @@ int main(void)
 	/*int len = _printf(NULL);
 	int len2 = printf(NULL);
 	unsigned int ui;
-    void *addr;*/
+    void *addr;
 	int len, len2;
 
 	len = _printf("%");
-	len2 = printf("%");
-	fflush(stdout);
+	len2 = printf("%");*/
+
+	_printf("%d\n", 1024);
+
+	_printf("%d", -1024);
+
+	/*printf("%lu\n", (unsigned long int)_pow(3, 4));*/
+
+	/*fflush(stdout);
 	if (len != len2)
 	{
 		printf("Lengths differ.\n");
 		printf("%d\n%d\n", len, len2);
 		fflush(stdout);
 		return (1);
-	}
+	}*/
 
 	/*_printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
 	printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');

@@ -77,6 +77,10 @@ int switcher(const char **format, va_list ap, int *counter)
 	case 's':
 		prntstring(ap, counter);
 		break;
+	case 'd':
+	case 'i':
+		prntdec(ap, counter);
+		break;
 	case '%':
 		write(1, *format, 1);
 		(*counter)++;
