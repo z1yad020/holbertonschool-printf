@@ -63,6 +63,7 @@ void prntnull(void)
  *
  * Return: void
  */
+/**
 int switcher(const char *format, va_list ap, int *counter)
 {
 	switch (*(++format))
@@ -79,6 +80,8 @@ int switcher(const char *format, va_list ap, int *counter)
 		break;
 	case '\0':
 		return (-1);
+	case'd':
+	  prntdec();
 	default:
 		write(1, format - 1, 1);
 		write(1, format, 1);
@@ -88,3 +91,4 @@ int switcher(const char *format, va_list ap, int *counter)
 	format++;
 	return (0);
 }
+*/

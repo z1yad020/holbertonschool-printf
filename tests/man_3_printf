@@ -1,0 +1,16 @@
+.TH PRINTF 3 "2 December 2023" "Version 1.0" "_printf man page"
+
+.SH NAME
+_printf \- format and print data
+
+.SH SYNOPSIS
+\fBinclude "main.h"\fR
+.br
+\fBint _printf(const char *format, ...);\fR
+
+.SH DESCRIPTION
+The _printf() function produces output according to a format.
+
+.SH RETURN VALUE
+Returns the number of characters printed.
+

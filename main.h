@@ -7,6 +7,6 @@ int _printf(const char *format, ...);
 void prntchar(va_list, int *);
 void prntstring(va_list, int *);
 void prntnull(void);
-int switcher(const char *, va_list, int *);
+int switcher(const char **, va_list, int *);
 
 #endif
