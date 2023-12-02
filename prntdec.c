@@ -1,0 +1,45 @@
+#include <unistd.h>
+#include <stdarg.h>
+#include <limits.h>
+#include "main.h"
+
+/**
+ * prntdec - Prints a decimal number to standard output
+ * @args: variable argument list containing the decimal number to print
+ * @counter: pointer to an integer tracking the number of characters printed
+ *
+ * Return: The updated value of counter after printing the decimal number.
+ */
+
+int prntdec(va_list args, int *counter)
+{
+	unsigned int decimal, i, a;
+	int digit;
+
+	decimal = 1;
+	digit = va_arg(args, int);
+
+	if (digit < 0)
+	{
+		(*counter) += _putchar('-');
+		a = digit * -1;
+	}
+	else
+	{
+		a = digit;
+	}
+	i = a;
+
+	while (i > 9)
+	{
+		i = i / 10;
+		decimal = decimal * 10;
+	}
+
+	while (decimal >= 1)
+	{
+		(*counter) = (*counter) + _putchar(((a / decimal) % 10) + '0');
+		decimal = decimal / 10;
+	}
+	return (*counter);
+}
