@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	va_list ap;
 
 	if (!format)
-		return (0);
+		return (-1);
 
 	va_start(ap, format);
 
@@ -32,7 +32,11 @@ int _printf(const char *format, ...)
 			continue;
 		}
 
+<<<<<<< HEAD
 		/*		switcher(format, ap, &counter); */
+=======
+		/*switcher(format, ap, &counter);*/
+>>>>>>> c69c9984fbe3402b4cb07dd5f00ec816954068e4
 		switch (*(++format))
 		{
 		case 'c':

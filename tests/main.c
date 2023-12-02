@@ -9,9 +9,15 @@
  */
 int main(void)
 {
+<<<<<<< HEAD
   /*int len;
     int len2;
     unsigned int ui;
+=======
+	int len = _printf("%");
+	int len2 = printf("%");
+    /*   unsigned int ui;
+>>>>>>> c69c9984fbe3402b4cb07dd5f00ec816954068e4
     void *addr;*/
 
 	/*_printf("%s%c%c%c%s%%%s%c", "Loading ", '.', '.', '.', " 99", " Please wait", '\n');
@@ -33,10 +39,24 @@ int main(void)
 	printf("css%ccs%scscscs\n", 'T', "Test");
 
 	_printf(NULL);
-	printf(NULL);
+	printf(NULL);*/
 
+	/*_printf("%d", '\0');*/
+	/*printf("%d\n%d", len, len2);*/
+
+<<<<<<< HEAD
 	_printf("%c", '\0');
 	printf("%c", '\0');*/
+=======
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}
+	return (0);
+>>>>>>> c69c9984fbe3402b4cb07dd5f00ec816954068e4
 
 
 /*_printf("%%\n");

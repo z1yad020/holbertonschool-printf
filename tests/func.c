@@ -57,6 +57,7 @@ void prntnull(void)
 	while (*str)
 		write(1, str++, 1);
 }
+<<<<<<< HEAD
 
 /**
  * switcher - find format specifier
@@ -92,3 +93,5 @@ int switcher(const char *format, va_list ap, int *counter)
 	return (0);
 }
 */
+=======
+>>>>>>> c69c9984fbe3402b4cb07dd5f00ec816954068e4
